@@ -74,41 +74,6 @@
     });
   });
 
-  // ── Billing toggle (monthly / annual) ───────────────────────
-  const billingToggle = document.getElementById('billingToggle');
-
-  if (billingToggle) {
-    const labels = billingToggle.querySelectorAll('.pricing-toggle__label');
-    const priceNumbers = document.querySelectorAll('.pricing-card__number[data-monthly]');
-
-    function updatePrices(billing) {
-      priceNumbers.forEach(function (el) {
-        const val = billing === 'annual'
-          ? el.getAttribute('data-annual')
-          : el.getAttribute('data-monthly');
-        if (val) el.textContent = val;
-      });
-
-      // Update billing notes
-      const notes = document.querySelectorAll('.pricing-card__billing-note');
-      notes.forEach(function (note) {
-        if (billing === 'annual') {
-          note.textContent = 'Billed annually (save 20%). Cancel anytime.';
-        } else {
-          note.textContent = 'Billed monthly. Cancel anytime.';
-        }
-      });
-    }
-
-    labels.forEach(function (label) {
-      label.addEventListener('click', function () {
-        labels.forEach(function (l) { l.classList.remove('active'); });
-        label.classList.add('active');
-        updatePrices(label.getAttribute('data-billing'));
-      });
-    });
-  }
-
   // ── Intersection Observer — animate-in elements ──────────────
   const animateEls = document.querySelectorAll('.animate-in');
 
