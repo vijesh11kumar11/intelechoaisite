@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing — compareAI by intelEcho</title>
+  <meta name="description" content="Simple, transparent pricing for compareAI. Choose a plan that fits your catalogue size and automation needs. Monthly and annual billing available." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Razorpay Checkout SDK -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+
+  <!-- ======================== NAVIGATION ======================== -->
+  <nav class="nav" id="navbar">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <div class="nav__logo-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        intel<span class="accent">Echo</span>
+      </a>
+
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="pricing.html" class="active">Pricing</a></li>
+      </ul>
+
+      <div class="nav__cta">
+        <a href="mailto:help.intelecho@gmail.com?subject=Getting%20Started%20with%20intelEcho" class="btn btn-primary">Get Started</a>
+      </div>
+
+      <div class="nav__hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="nav__mobile" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="mailto:help.intelecho@gmail.com?subject=Getting%20Started%20with%20intelEcho" class="btn btn-primary">Get Started</a>
+  </div>
+
+  <!-- ======================== PRICING HERO ======================== -->
+  <section class="pricing-hero">
+    <div class="container">
+      <div class="hero__eyebrow" style="margin:0 auto 24px; display:inline-flex;">compareAI Pricing</div>
+      <h1 style="color:var(--white); margin-bottom:16px;">Simple, Transparent Plans</h1>
+      <p class="lead" style="color:rgba(255,255,255,0.72); margin:0 auto;">No hidden fees. No per-update charges. Pick the plan that fits your catalogue and scale up as you grow. Cancel anytime.</p>
+
+      <div class="pricing-toggle" id="billingToggle">
+        <span class="pricing-toggle__label active" data-billing="monthly">Monthly</span>
+        <span class="pricing-toggle__label" data-billing="annual">Annual <span class="pricing-toggle__save">Save 20%</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== PRICING CARDS ======================== -->
+  <section class="section section--gray" style="padding-top: 80px;">
+    <div class="container">
+      <div class="pricing__grid">
+
+        <!-- STARTER -->
+        <div class="pricing-card">
+          <div class="pricing-card__plan">Starter</div>
+          <h3>Launch</h3>
+          <p class="pricing-card__desc">For small retailers and new ecommerce stores getting started with automated pricing.</p>
+
+          <div class="pricing-card__price">
+            <div class="pricing-card__amount">
+              <span class="pricing-card__currency">$</span>
+              <span class="pricing-card__number" data-monthly="159" data-annual="127">159</span>
+              <span class="pricing-card__period">/month</span>
+            </div>
+            <p class="pricing-card__billing-note" id="starterNote">Billed monthly. Cancel anytime.</p>
+          </div>
+
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature">
+              <span class="check">✓</span>
+              Up to 1,000 active SKUs
+            </li>
+            <li class="pricing-card__feature">
+              <span class="check">✓</span>
+              2 price comparisons per month
+            </li>
+            <li class="pricing-card__feature">
+              <span class="check">✓</span>
+              1 ecommerce platform integration
+            </li>
+            <li class="pricing-card__feature">
+              <span class="check">✓</span>
+              Margin floor protection
+            </li>
+            <li class="pricing-card__feature">
+              <span class="check">✓</span>
+              Email support (48h response)
+            </li>
+            <li class="pricing-card__feature">
+              <span class="check">✓</span>
+              14-day change history
+            </li>
+            <li class="pricing-card__feature">
+              <span class="check">✓</span>
+              Real-time sync
+            </li>
+            <li class="pricing-card__feature">
+              <span class="check">✓</span>
+              API access
+            </li>
+            <li class="pricing-card__feature">
+              <span class="check check--na">—</span>
+              <span style="color:var(--mid-gray);">Dedicated account manager</span>
+            </li>
+          </ul>
+
+          <button class="btn btn-outline-dark rzp-trigger"
+            data-plan="Launch"
+            data-price-monthly="15900"
+            data-price-annual="12700"
+            data-desc="compareAI Launch Plan — 1,000 SKUs, 2x Monthly Comparison">
+            Subscribe Now
+          </button>
+        </div>
+
+        <!-- PROFESSIONAL (FEATURED) -->
+        <div class="pricing-card pricing-card--featured">
+          <div class="pricing-card__popular">Most Popular</div>
+          <div class="pricing-card__plan">Professional</div>
+          <h3>Grow</h3>
+          <p class="pricing-card__desc">For established retailers who need real-time intelligence and advanced pricing strategies.</p>
+
+          <div class="pricing-card__price">
+            <div class="pricing-card__amount">
+              <span class="pricing-card__currency">$</span>
+              <span class="pricing-card__number" data-monthly="219" data-annual="175">219</span>
+              <span class="pricing-card__period">/month</span>
+            </div>
+            <p class="pricing-card__billing-note" id="proNote">Billed monthly. Cancel anytime.</p>
+          </div>
+
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature">
+              <span class="check">✓</span>
+              Up to 10,000 active SKUs
+            </li>
+            <li class="pricing-card__feature">
+              <span class="check">✓</span>
+              15 marketplace monitors
+            </li>
+            <li class="pricing-card__feature">
+              <span class="check">✓</span>
+              <strong>4 price comparisons per month</strong>
+            </li>
+            <li class="pricing-card__feature">
+              <span class="check">✓</span>
+              3 ecommerce platform integrations
+            </li>
+            <li class="pricing-card__feature">
+              <span class="check">✓</span>
+              Advanced pricing rules engine
+            </li>
+            <li class="pricing-card__feature">
+              <span class="check">✓</span>
+              Priority email + chat support (4h response)
+            </li>
+            <li class="pricing-card__feature">
+              <span class="check">✓</span>
+              90-day change history & audit log
+            </li>
+            <li class="pricing-card__feature">
+              <span class="check">✓</span>
+              Competitive analytics dashboard
+            </li>
+            <li class="pricing-card__feature">
+              <span class="check">✓</span>
+              REST API access
+            </li>
+            <li class="pricing-card__feature">
+              <span class="check check--na">—</span>
+              <span style="color:var(--mid-gray);">Dedicated account manager</span>
+            </li>
+          </ul>
+
+          <button class="btn btn-primary rzp-trigger"
+            data-plan="Grow"
+            data-price-monthly="21900"
+            data-price-annual="17500"
+            data-desc="compareAI Grow Plan — 10,000 SKUs, 4x Monthly Comparison">
+            Subscribe Now
+          </button>
+        </div>
+
+        <!-- ENTERPRISE -->
+        <div class="pricing-card">
+          <div class="pricing-card__plan">Enterprise</div>
+          <h3>Scale</h3>
+          <p class="pricing-card__desc">For large retailers and multi-brand operators who need maximum scale, customization, and support.</p>
+
+          <div class="pricing-card__price">
+            <div class="pricing-card__amount pricing-card__enterprise">
+              <span class="pricing-card__number" style="font-size:2rem;">Custom</span>
+            </div>
+            <p class="pricing-card__billing-note">Tailored to your catalogue size and usage. Annual contracts available.</p>
+          </div>
+
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature">
+              <span class="check">✓</span>
+              <strong>Unlimited SKUs</strong>
+            </li>
+            <li class="pricing-card__feature">
+              <span class="check">✓</span>
+              50+ marketplace monitors
+            </li>
+            <li class="pricing-card__feature">
+              <span class="check">✓</span>
+              Real-time sync (&lt;30s latency)
+            </li>
+            <li class="pricing-card__feature">
+              <span class="check">✓</span>
+              Unlimited platform integrations
+            </li>
+            <li class="pricing-card__feature">
+              <span class="check">✓</span>
+              Custom AI pricing model training
+            </li>
+            <li class="pricing-card__feature">
+              <span class="check">✓</span>
+              24/7 phone + dedicated Slack channel
+            </li>
+            <li class="pricing-card__feature">
+              <span class="check">✓</span>
+              Unlimited change history & audit log
+            </li>
+            <li class="pricing-card__feature">
+              <span class="check">✓</span>
+              Advanced analytics + custom reports
+            </li>
+            <li class="pricing-card__feature">
+              <span class="check">✓</span>
+              Full API + Webhook access
+            </li>
+            <li class="pricing-card__feature">
+              <span class="check">✓</span>
+              <strong>Dedicated account manager</strong>
+            </li>
+          </ul>
+
+          <a href="mailto:help.intelecho@gmail.com" class="btn btn-outline-dark"><i class="fa-solid fa-envelope" style="margin-right:6px;"></i>Talk to Sales</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== COMPARISON TABLE ======================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <span class="eyebrow">Full Comparison</span>
+        <h2>What's Included in Each Plan</h2>
+        <p>A detailed breakdown of every feature across all compareAI plans.</p>
+      </div>
+
+      <div style="overflow-x: auto; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--border);">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Launch</th>
+              <th class="featured-col">Grow</th>
+              <th>Scale</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Active SKUs</strong></td>
+              <td>1,000</td>
+              <td class="featured-col"><strong>10,000</strong></td>
+              <td>Unlimited</td>
+            </tr>
+            <tr>
+              <td><strong>Price Sync Frequency</strong></td>
+              <td>2x / month</td>
+              <td class="featured-col">4x / month</td>
+              <td>Custom</td>
+            </tr>
+            <tr>
+              <td><strong>Platform Integrations</strong></td>
+              <td>1</td>
+              <td class="featured-col">3</td>
+              <td>Unlimited</td>
+            </tr>
+            <tr>
+              <td><strong>Margin Floor Protection</strong></td>
+              <td><span class="tick">✓</span></td>
+              <td class="featured-col"><span class="tick">✓</span></td>
+              <td><span class="tick">✓</span></td>
+            </tr>
+            <tr>
+              <td><strong>Pricing Strategies</strong></td>
+              <td>Match Lowest, Beat by %</td>
+              <td class="featured-col">All 5 strategies</td>
+              <td>All 5 + Custom AI</td>
+            </tr>
+            <tr>
+              <td><strong>Change History / Audit Log</strong></td>
+              <td>14 days</td>
+              <td class="featured-col">90 days</td>
+              <td>Unlimited</td>
+            </tr>
+            <tr>
+              <td><strong>Instant Price Rollback</strong></td>
+              <td><span class="tick">✓</span></td>
+              <td class="featured-col"><span class="tick">✓</span></td>
+              <td><span class="tick">✓</span></td>
+            </tr>
+            <tr>
+              <td><strong>Competitive Analytics Dashboard</strong></td>
+              <td>Basic</td>
+              <td class="featured-col">Full</td>
+              <td>Full + Custom Reports</td>
+            </tr>
+            <tr>
+              <td><strong>REST API Access</strong></td>
+              <td><span class="tick">✓</span></td>
+              <td class="featured-col"><span class="tick">✓</span></td>
+              <td><span class="tick">✓</span></td>
+            </tr>
+            <tr>
+              <td><strong>Webhooks</strong></td>
+              <td><span class="cross">—</span></td>
+              <td class="featured-col"><span class="tick">✓</span></td>
+              <td><span class="tick">✓</span></td>
+            </tr>
+            <tr>
+              <td><strong>SSO / SAML</strong></td>
+              <td><span class="cross">—</span></td>
+              <td class="featured-col"><span class="tick">✓</span></td>
+              <td><span class="tick">✓</span></td>
+            </tr>
+            <tr>
+              <td><strong>Custom AI Model Training</strong></td>
+              <td><span class="cross">—</span></td>
+              <td class="featured-col"><span class="cross">—</span></td>
+              <td><span class="tick">✓</span></td>
+            </tr>
+            <tr>
+              <td><strong>Support</strong></td>
+              <td>Email (48h)</td>
+              <td class="featured-col">Priority Email + Chat (4h)</td>
+              <td>24/7 Phone + Dedicated Slack</td>
+            </tr>
+            <tr>
+              <td><strong>Dedicated Account Manager</strong></td>
+              <td><span class="cross">—</span></td>
+              <td class="featured-col"><span class="cross">—</span></td>
+              <td><span class="tick">✓</span></td>
+            </tr>
+            <tr>
+              <td><strong>Data Residency</strong></td>
+              <td><span class="tick">✓</span></td>
+              <td class="featured-col"><span class="tick">✓</span></td>
+              <td><span class="tick">✓</span></td>
+            </tr>
+            <tr>
+              <td><strong>SLA Uptime</strong></td>
+              <td>99.5%</td>
+              <td class="featured-col">99.9%</td>
+              <td>99.95%</td>
+            </tr>
+            <tr>
+              <td><strong>Monthly Price ($)</strong></td>
+              <td>$159/mo</td>
+              <td class="featured-col"><strong>$219/mo</strong></td>
+              <td>Custom</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== ADD-ONS ======================== -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section__header">
+        <span class="eyebrow">Add-Ons</span>
+        <h2>Extend Your Plan</h2>
+        <p>Need more capacity? Add on exactly what you need without upgrading your entire plan.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
+
+        <div style="background:var(--white); border:1px solid var(--border); border-radius:var(--radius-md); padding:28px 24px; display:flex; flex-direction:column; gap:12px;">
+          <h4>Extra SKU Pack</h4>
+          <p style="font-size:0.9rem; flex:1;">Add 1,000 additional monitored SKUs to any plan. Stack as many packs as needed.</p>
+          <div style="display:flex; align-items:baseline; gap:4px;">
+            <span style="font-size:1.4rem; font-weight:800; color:var(--navy);">$49</span>
+            <span style="font-size:0.85rem; color:var(--text-light);">/ 1,000 SKUs / month</span>
+          </div>
+        </div>
+
+        <div style="background:var(--white); border:1px solid var(--border); border-radius:var(--radius-md); padding:28px 24px; display:flex; flex-direction:column; gap:12px;">
+          <h4>Additional Marketplace</h4>
+          <p style="font-size:0.9rem; flex:1;">Monitor any additional marketplace or retailer website not included in your base plan.</p>
+          <div style="display:flex; align-items:baseline; gap:4px;">
+            <span style="font-size:1.4rem; font-weight:800; color:var(--navy);">$29</span>
+            <span style="font-size:0.85rem; color:var(--text-light);">/ marketplace / month</span>
+          </div>
+        </div>
+
+        <div style="background:var(--white); border:1px solid var(--border); border-radius:var(--radius-md); padding:28px 24px; display:flex; flex-direction:column; gap:12px;">
+          <h4>Onboarding & Setup</h4>
+          <p style="font-size:0.9rem; flex:1;">Hands-on onboarding session with a compareAI specialist to configure rules and integrate your store.</p>
+          <div style="display:flex; align-items:baseline; gap:4px;">
+            <span style="font-size:1.4rem; font-weight:800; color:var(--navy);">$299</span>
+            <span style="font-size:0.85rem; color:var(--text-light);">one-time</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== FAQ ======================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section__header">
+        <span class="eyebrow">FAQ</span>
+        <h2>Frequently Asked Questions</h2>
+        <p>Everything you need to know before getting started with compareAI.</p>
+      </div>
+
+      <div class="faq__list">
+
+        <div class="faq__item">
+          <div class="faq__question">
+            How does billing work after I subscribe?
+            <span class="faq__icon">+</span>
+          </div>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">
+              Once you subscribe, your plan is activated immediately and your card is charged at the start of each billing cycle (monthly or annual). You can upgrade, downgrade, or cancel at any time from your account dashboard. Cancellations take effect at the end of the current billing period — you will not be charged again after cancelling.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <div class="faq__question">
+            What ecommerce platforms does compareAI support?
+            <span class="faq__icon">+</span>
+          </div>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">
+              compareAI natively integrates with Shopify, WooCommerce, Magento, and BigCommerce through one-click plugins. For platforms not listed, we provide a full REST API and webhook system that allows integration with any ecommerce stack. Our technical team can also assist with custom integrations on Enterprise plans.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <div class="faq__question">
+            Will compareAI ever lower my prices below my minimum margin?
+            <span class="faq__icon">+</span>
+          </div>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">
+              Never. Margin floor protection is a foundational feature of every plan. You set minimum price thresholds — either as an absolute dollar amount or as a percentage markup over your cost — and compareAI will never breach those boundaries, regardless of what competitors do. Your margins are always protected.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <div class="faq__question">
+            How quickly does compareAI detect competitor price changes?
+            <span class="faq__icon">+</span>
+          </div>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">
+              On the Launch plan, we run 2 price comparison scans per month across your monitored platforms. On the Grow (Professional) plan, we run 4 comparison scans per month for more frequent competitive insights. Enterprise clients receive a custom scan schedule tailored to their needs.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <div class="faq__question">
+            Where is my data stored? Is it secure?
+            <span class="faq__icon">+</span>
+          </div>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">
+              Yes. All data processed and stored by compareAI resides in secure, enterprise-grade data centres. intelEcho is fully compliant with applicable privacy legislation and industry-standard security practices. We never share your data with third parties without your explicit written consent.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <div class="faq__question">
+            Can I switch plans or cancel at any time?
+            <span class="faq__icon">+</span>
+          </div>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">
+              Yes. All monthly plans can be upgraded, downgraded, or cancelled at any time with no penalties or lock-in periods. If you cancel, you retain access until the end of your current billing period. Annual plans are billed upfront and are non-refundable after the first 30 days, but come with a 20% discount compared to monthly billing.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <div class="faq__question">
+            What happens if I exceed my SKU limit?
+            <span class="faq__icon">+</span>
+          </div>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">
+              If your catalogue grows beyond your plan's SKU limit, compareAI will notify you and pause monitoring on the oldest SKUs until you either upgrade your plan or purchase an Extra SKU Pack add-on ($49 CA per 1,000 SKUs/month). We never silently drop active monitoring without alerting you first.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <div class="faq__question">
+            Do you offer discounts for startups or non-profits?
+            <span class="faq__icon">+</span>
+          </div>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">
+              Yes. We offer a 30% startup discount for companies less than 2 years old with less than $2M in annual revenue, and a 40% non-profit discount for registered charities. Please reach out to our sales team with proof of eligibility to apply the discount to your account.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== GUARANTEE ======================== -->
+  <section class="section section--gray">
+    <div class="container">
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:28px; text-align:center;">
+        <div style="padding:32px 24px;">
+          <div style="font-size:2.5rem; margin-bottom:16px;">🛡️</div>
+          <h4 style="margin-bottom:10px;">30-Day Money-Back Guarantee</h4>
+          <p style="font-size:0.9rem;">Not satisfied within the first 30 days? We'll issue a full refund, no questions asked.</p>
+        </div>
+        <div style="padding:32px 24px; border-left:1px solid var(--border); border-right:1px solid var(--border);">
+          <div style="font-size:2.5rem; margin-bottom:16px;">💰</div>
+          <h4 style="margin-bottom:10px;">Transparent Pricing</h4>
+          <p style="font-size:0.9rem;">Simple, clear pricing with no hidden fees or surprise charges.</p>
+        </div>
+        <div style="padding:32px 24px;">
+          <div style="font-size:2.5rem; margin-bottom:16px;">📞</div>
+          <h4 style="margin-bottom:10px;">Sales Team Available</h4>
+          <p style="font-size:0.9rem;">Need help choosing a plan? Our sales team is available to guide you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== FINAL CTA ======================== -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner">
+        <div class="cta-banner__content">
+          <h2>Ready to Automate Your Pricing?</h2>
+          <p>Join hundreds of retailers using compareAI to stay competitive. Cancel anytime.</p>
+        </div>
+        <div class="cta-banner__actions">
+          <a href="mailto:help.intelecho@gmail.com?subject=Getting%20Started%20with%20intelEcho" class="btn btn-primary">Get Started Now</a>
+          <a href="products.html" class="btn btn-outline">Learn More About compareAI</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">intel<span class="accent">Echo</span></div>
+          <p class="footer__desc">Empowering businesses with artificial intelligence that drives real, measurable results.</p>
+          <div class="footer__location">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Toronto, Ontario, Canada
+          </div>
+        </div>
+        <div>
+          <p class="footer__col-title">Company</p>
+          <ul class="footer__links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#team">Our Team</a></li>
+            <li><a href="about.html#values">Our Values</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Products</p>
+          <ul class="footer__links">
+            <li><a href="products.html">compareAI</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="products.html#integrations">Integrations</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Resources</p>
+          <ul class="footer__links">
+            <li><a href="pricing.html#faq">FAQ</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+          <p class="footer__copy">&copy; 2026 intelEcho Inc. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+  <!-- ========================================================
+       RAZORPAY INTEGRATION TEMPLATE
+       ========================================================
+       SETUP CHECKLIST:
+       1. Replace RAZORPAY_KEY_ID with your live/test key from
+          https://dashboard.razorpay.com/app/keys
+       2. Replace RAZORPAY_BUSINESS_NAME with your company name
+       3. Replace RAZORPAY_LOGO_URL with a hosted logo URL (optional)
+       4. For production: generate order_id server-side via
+          POST https://api.razorpay.com/v1/orders  and pass it below.
+          (Without order_id the form still works in test mode.)
+       5. Replace PAYMENT_SUCCESS_URL / PAYMENT_FAILURE_URL with
+          actual redirect pages on your server.
+       ======================================================== -->
+  <script>
+    (function () {
+      // ── ① FILL THESE PARAMETERS ──────────────────────────────────
+      var RZP_CONFIG = {
+        key:          'RAZORPAY_KEY_ID',        // e.g. 'rzp_live_XXXXXXXXXX'
+        businessName: 'intelEcho Inc.',
+        logoUrl:      'RAZORPAY_LOGO_URL',      // hosted image URL or '' to omit
+        currency:     'INR',                    // change to 'CAD' if enabled on your account
+        successUrl:   'PAYMENT_SUCCESS_URL',    // e.g. '/thank-you.html'
+        failureUrl:   'PAYMENT_FAILURE_URL',    // e.g. '/payment-failed.html'
+        theme:        '#0077B6'                 // matches intelEcho brand colour
+      };
+      // ─────────────────────────────────────────────────────────────
+
+      // Payment modal elements
+      var modal     = document.getElementById('payModal');
+      var overlay   = document.getElementById('payOverlay');
+      var form      = document.getElementById('payForm');
+      var planLabel = document.getElementById('payPlanLabel');
+      var priceLabel= document.getElementById('payPriceLabel');
+      var closeBtn  = document.getElementById('payClose');
+
+      var _currentPlan  = {};
+      var _billingCycle = 'monthly';
+
+      // Track active billing cycle from toggle
+      document.querySelectorAll('.pricing-toggle__label').forEach(function (lbl) {
+        lbl.addEventListener('click', function () {
+          _billingCycle = lbl.getAttribute('data-billing') || 'monthly';
+        });
+      });
+
+      // Open modal on any .rzp-trigger click
+      document.querySelectorAll('.rzp-trigger').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          _currentPlan = {
+            plan:  btn.getAttribute('data-plan'),
+            desc:  btn.getAttribute('data-desc'),
+            amount: _billingCycle === 'annual'
+                      ? parseInt(btn.getAttribute('data-price-annual'),  10)
+                      : parseInt(btn.getAttribute('data-price-monthly'), 10)
+          };
+          // Format display price (amount stored in subunits, e.g. paise or cents)
+          var display = ((_currentPlan.amount / 100).toLocaleString('en-US', {
+            style: 'currency', currency: RZP_CONFIG.currency
+          }));
+          planLabel.textContent  = _currentPlan.plan + ' Plan';
+          priceLabel.textContent = display + ' / month (' + _billingCycle + ' billing)';
+
+          modal.classList.add('open');
+          overlay.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      // Close modal
+      function closeModal() {
+        modal.classList.remove('open');
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+        form.reset();
+      }
+      if (closeBtn)   closeBtn.addEventListener('click', closeModal);
+      if (overlay)    overlay.addEventListener('click', closeModal);
+
+      // Form submit → open Razorpay checkout
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          var name    = document.getElementById('payName').value.trim();
+          var email   = document.getElementById('payEmail').value.trim();
+          var phone   = document.getElementById('payPhone').value.trim();
+
+          var options = {
+            key:         RZP_CONFIG.key,
+            amount:      _currentPlan.amount,   // in smallest currency unit
+            currency:    RZP_CONFIG.currency,
+            name:        RZP_CONFIG.businessName,
+            description: _currentPlan.desc,
+            image:       RZP_CONFIG.logoUrl || undefined,
+
+            // ── ② SERVER-SIDE ORDER ID (recommended for production) ──
+            // Generate via: POST https://api.razorpay.com/v1/orders
+            // Then pass the returned id here:
+            // order_id: 'ORDER_ID_FROM_YOUR_SERVER',
+
+            handler: function (response) {
+              // ── ③ VERIFY PAYMENT SIGNATURE ON YOUR SERVER ────────
+              // response.razorpay_payment_id
+              // response.razorpay_order_id
+              // response.razorpay_signature
+              // Send these to your backend endpoint for verification
+              // before granting access.
+              // ────────────────────────────────────────────────────
+
+              // Temporary client-side success redirect:
+              window.location.href = RZP_CONFIG.successUrl
+                + '?payment_id=' + encodeURIComponent(response.razorpay_payment_id)
+                + '&plan='       + encodeURIComponent(_currentPlan.plan);
+            },
+
+            prefill: {
+              name:    name,
+              email:   email,
+              contact: phone
+            },
+
+            notes: {
+              plan:    _currentPlan.plan,
+              billing: _billingCycle
+            },
+
+            modal: {
+              ondismiss: function () {
+                // User closed Razorpay checkout without paying
+                // Optionally redirect or log:
+                // window.location.href = RZP_CONFIG.failureUrl;
+              }
+            },
+
+            theme: { color: RZP_CONFIG.theme }
+          };
+
+          closeModal();
+
+          var rzp = new Razorpay(options);
+          rzp.on('payment.failed', function (resp) {
+            // resp.error contains: code, description, source, step, reason,
+            //                      metadata.order_id, metadata.payment_id
+            alert('Payment failed: ' + resp.error.description);
+            // window.location.href = RZP_CONFIG.failureUrl;
+          });
+          rzp.open();
+        });
+      }
+
+    }());
+  </script>
+
+  <!-- ======================== PAYMENT MODAL ======================== -->
+  <div class="pay-overlay" id="payOverlay"></div>
+  <div class="pay-modal" id="payModal" role="dialog" aria-modal="true" aria-labelledby="payModalTitle">
+    <button class="pay-modal__close" id="payClose" aria-label="Close">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="pay-modal__header">
+      <div class="pay-modal__logo">move<span>AI</span></div>
+      <h3 id="payModalTitle">Complete Your Subscription</h3>
+      <p>Enter your details to proceed to secure checkout.</p>
+    </div>
+
+    <div class="pay-modal__plan-summary">
+      <div class="pay-modal__plan-row">
+        <span class="pay-modal__plan-name" id="payPlanLabel">Grow Plan</span>
+        <span class="pay-modal__plan-price" id="payPriceLabel">$219 / month</span>
+      </div>
+      <div class="pay-modal__trial-note">
+        <i class="fa-solid fa-shield-halved"></i>
+        30-day money-back guarantee &mdash; cancel anytime
+      </div>
+    </div>
+
+    <form class="pay-modal__form" id="payForm" novalidate>
+      <div class="pay-modal__field">
+        <label for="payName">Full Name <span aria-hidden="true">*</span></label>
+        <div class="pay-modal__input-wrap">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" id="payName" placeholder="Jane Smith" required autocomplete="name" />
+        </div>
+      </div>
+      <div class="pay-modal__field">
+        <label for="payEmail">Work Email <span aria-hidden="true">*</span></label>
+        <div class="pay-modal__input-wrap">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" id="payEmail" placeholder="jane@yourcompany.com" required autocomplete="email" />
+        </div>
+      </div>
+      <div class="pay-modal__field">
+        <label for="payPhone">Phone Number <span aria-hidden="true">*</span></label>
+        <div class="pay-modal__input-wrap">
+          <i class="fa-solid fa-phone"></i>
+          <input type="tel" id="payPhone" placeholder="+1 416 000 0000" required autocomplete="tel" />
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary pay-modal__submit">
+        <i class="fa-solid fa-lock"></i>
+        Proceed to Secure Checkout
+      </button>
+      <p class="pay-modal__secure-note">
+        <i class="fa-brands fa-razorpay"></i>
+        Secured by Razorpay &nbsp;&bull;&nbsp; 256-bit SSL encryption
+      </p>
+    </form>
+  </div>
+
+</body>
+</html>

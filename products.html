@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>compareAI — Automated Price Intelligence | intelEcho</title>
+  <meta name="description" content="compareAI by intelEcho automatically monitors competitor pricing across Amazon, Walmart, and 50+ platforms, then updates your ecommerce prices in real-time." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ======================== NAVIGATION ======================== -->
+  <nav class="nav" id="navbar">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <div class="nav__logo-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        intel<span class="accent">Echo</span>
+      </a>
+
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+      </ul>
+
+      <div class="nav__cta">
+        <a href="mailto:help.intelecho@gmail.com?subject=Getting%20Started%20with%20intelEcho" class="btn btn-primary">Get Started</a>
+      </div>
+
+      <div class="nav__hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="nav__mobile" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="mailto:help.intelecho@gmail.com?subject=Getting%20Started%20with%20intelEcho" class="btn btn-primary">Get Started</a>
+  </div>
+
+  <!-- ======================== PRODUCT HERO ======================== -->
+  <section class="product-hero">
+    <div class="container">
+      <div class="product-hero__inner">
+        <div class="animate-in">
+          <div class="hero__eyebrow">An intelEcho Product</div>
+          <h1>compare<span style="color:var(--sky-light);">AI</span></h1>
+          <p class="lead" style="color:rgba(255,255,255,0.75); margin-top:16px;">The intelligent pricing engine that monitors major ecommerce platforms and automatically updates your store prices — keeping you competitive 24 hours a day, 7 days a week, without a single manual update.</p>
+          <div class="hero__actions" style="margin-top:36px;">
+            <a href="pricing.html" class="btn btn-primary">View Pricing Plans</a>
+            <a href="#how-it-works" class="btn btn-outline">See How It Works</a>
+          </div>
+
+          <div style="display:flex; gap:32px; margin-top:40px; padding-top:32px; border-top:1px solid rgba(255,255,255,0.12); flex-wrap:wrap;">
+            <div>
+              <div style="font-size:1.6rem; font-weight:800; color:var(--white);">50+</div>
+              <div style="font-size:0.82rem; color:rgba(255,255,255,0.5); margin-top:2px;">Platforms Monitored</div>
+            </div>
+            <div>
+              <div style="font-size:1.6rem; font-weight:800; color:var(--white);">60s</div>
+              <div style="font-size:0.82rem; color:rgba(255,255,255,0.5); margin-top:2px;">Avg. Sync Latency</div>
+            </div>
+            <div>
+              <div style="font-size:1.6rem; font-weight:800; color:var(--white);">23%</div>
+              <div style="font-size:0.82rem; color:rgba(255,255,255,0.5); margin-top:2px;">Avg. Revenue Lift</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-hero__visual animate-in animate-in--delay-2">
+          <div class="compare-widget">
+            <div class="compare-widget__header">
+              <div class="compare-widget__dot"></div>
+              <div class="compare-widget__dot"></div>
+              <div class="compare-widget__dot"></div>
+              <span class="compare-widget__title">compareAI Dashboard — Live View</span>
+            </div>
+            <div class="compare-widget__body">
+              <div class="compare-row">
+                <div class="compare-row__product">Wireless Earbuds Pro X</div>
+                <div class="compare-row__prices">
+                  <div class="compare-row__price">
+                    <span class="label">Amazon</span>
+                    <span class="value lower">$79.99</span>
+                  </div>
+                  <div class="compare-row__arrow">→</div>
+                  <div class="compare-row__price">
+                    <span class="label">Your Store</span>
+                    <span class="value updated">$79.49</span>
+                  </div>
+                </div>
+              </div>
+              <div class="compare-row">
+                <div class="compare-row__product">Smart Watch Series 4</div>
+                <div class="compare-row__prices">
+                  <div class="compare-row__price">
+                    <span class="label">Walmart</span>
+                    <span class="value lower">$219.00</span>
+                  </div>
+                  <div class="compare-row__arrow">→</div>
+                  <div class="compare-row__price">
+                    <span class="label">Your Store</span>
+                    <span class="value updated">$217.50</span>
+                  </div>
+                </div>
+              </div>
+              <div class="compare-row">
+                <div class="compare-row__product">USB-C Hub 7-in-1</div>
+                <div class="compare-row__prices">
+                  <div class="compare-row__price">
+                    <span class="label">Best Buy</span>
+                    <span class="value lower">$44.99</span>
+                  </div>
+                  <div class="compare-row__arrow">→</div>
+                  <div class="compare-row__price">
+                    <span class="label">Your Store</span>
+                    <span class="value updated">$43.50</span>
+                  </div>
+                </div>
+              </div>
+              <div class="compare-row">
+                <div class="compare-row__product">Mechanical Keyboard TKL</div>
+                <div class="compare-row__prices">
+                  <div class="compare-row__price">
+                    <span class="label">Newegg</span>
+                    <span class="value lower">$119.00</span>
+                  </div>
+                  <div class="compare-row__arrow">→</div>
+                  <div class="compare-row__price">
+                    <span class="label">Your Store</span>
+                    <span class="value updated">$118.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="compare-widget__footer">
+              <div class="compare-widget__status">
+                <div class="pulse-dot"></div>
+                Real-time sync active — 4 prices updated
+              </div>
+              <span style="font-size:0.78rem; color:var(--mid-gray);">Margin floor: protected ✓</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== HOW IT WORKS ======================== -->
+  <section class="section section--gray" id="how-it-works">
+    <div class="container">
+      <div class="section__header">
+        <span class="eyebrow">How It Works</span>
+        <h2>Four Steps to Automated Price Dominance</h2>
+        <p>compareAI handles the entire pricing lifecycle — from data ingestion to automatic store updates — so you can focus on growing your business.</p>
+      </div>
+      <div class="how-it-works__steps">
+        <div class="step-card animate-in">
+          <div class="step-card__number">1</div>
+          <h4>Connect Your Store</h4>
+          <p>Install our native plugin for Shopify, WooCommerce, Magento, or connect via our REST API. Setup takes under 10 minutes with no coding required.</p>
+        </div>
+        <div class="step-card animate-in animate-in--delay-1">
+          <div class="step-card__number">2</div>
+          <h4>Define Your Rules</h4>
+          <p>Set minimum margin floors, maximum discount thresholds, and competitor match strategies. Tell compareAI exactly how aggressive you want to be.</p>
+        </div>
+        <div class="step-card animate-in animate-in--delay-2">
+          <div class="step-card__number">3</div>
+          <h4>AI Monitors Markets</h4>
+          <p>Our crawler continuously scans Amazon, Walmart, Best Buy, and 50+ platforms, matching products to your catalogue using AI-powered SKU identification.</p>
+        </div>
+        <div class="step-card animate-in animate-in--delay-3">
+          <div class="step-card__number">4</div>
+          <h4>Prices Auto-Update</h4>
+          <p>When a competitor changes their price, compareAI automatically calculates the optimal response and pushes the update to your store — in real-time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== DEEP FEATURES ======================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <span class="eyebrow">Core Features</span>
+        <h2>Everything You Need to Win on Price</h2>
+        <p>compareAI is built for retailers who understand that pricing is both a science and a strategy.</p>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start; margin-top:0;">
+
+        <!-- Feature list -->
+        <div style="display:flex; flex-direction:column; gap:28px;">
+
+          <div style="display:flex; gap:20px; align-items:flex-start; padding:24px; background:var(--off-white); border-radius:var(--radius-md); border:1px solid var(--border);">
+            <div style="width:44px; height:44px; background:rgba(0,119,182,0.1); border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <div>
+              <h4 style="margin-bottom:6px;">AI-Powered Product Matching</h4>
+              <p style="font-size:0.9rem;">Our NLP and computer vision models identify the same product across different marketplaces regardless of title variations, bundles, or regional naming differences.</p>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:20px; align-items:flex-start; padding:24px; background:var(--off-white); border-radius:var(--radius-md); border:1px solid var(--border);">
+            <div style="width:44px; height:44px; background:rgba(0,119,182,0.1); border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12M12 12L8 16M12 12l4 4"/><path d="M20 16.7A8 8 0 1 0 5.3 7.3"/></svg>
+            </div>
+            <div>
+              <h4 style="margin-bottom:6px;">Real-Time Price Sync</h4>
+              <p style="font-size:0.9rem;">Price changes detected on monitored platforms trigger an immediate recalculation and an automatic push to your store within 60 seconds on Professional and Enterprise plans.</p>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:20px; align-items:flex-start; padding:24px; background:var(--off-white); border-radius:var(--radius-md); border:1px solid var(--border);">
+            <div style="width:44px; height:44px; background:rgba(0,119,182,0.1); border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <div>
+              <h4 style="margin-bottom:6px;">Margin Protection Rules</h4>
+              <p style="font-size:0.9rem;">Set absolute or percentage-based floor prices per product, category, or across your entire catalogue. compareAI will never drop a price below your defined threshold — ever.</p>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:20px; align-items:flex-start; padding:24px; background:var(--off-white); border-radius:var(--radius-md); border:1px solid var(--border);">
+            <div style="width:44px; height:44px; background:rgba(0,119,182,0.1); border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+            </div>
+            <div>
+              <h4 style="margin-bottom:6px;">Competitive Analytics Dashboard</h4>
+              <p style="font-size:0.9rem;">Visualize your pricing position relative to each competitor, track historical price trends, and identify strategic opportunities where you can raise prices without losing conversions.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sidebar callout -->
+        <div>
+          <div style="background:var(--navy); border-radius:var(--radius-lg); padding:40px 36px; margin-bottom:24px;">
+            <h3 style="color:var(--white); margin-bottom:16px; font-size:1.2rem;">Pricing Strategies Supported</h3>
+            <ul style="display:flex; flex-direction:column; gap:14px;">
+              <li style="display:flex; align-items:center; gap:12px; font-size:0.9rem; color:rgba(255,255,255,0.72);">
+                <span style="width:6px; height:6px; background:var(--sky-light); border-radius:50%; flex-shrink:0;"></span>
+                <strong style="color:var(--white);">Match Lowest:</strong>&nbsp;Always match the cheapest competitor price
+              </li>
+              <li style="display:flex; align-items:center; gap:12px; font-size:0.9rem; color:rgba(255,255,255,0.72);">
+                <span style="width:6px; height:6px; background:var(--sky-light); border-radius:50%; flex-shrink:0;"></span>
+                <strong style="color:var(--white);">Beat by Percentage:</strong>&nbsp;Undercut the lowest by a fixed %
+              </li>
+              <li style="display:flex; align-items:center; gap:12px; font-size:0.9rem; color:rgba(255,255,255,0.72);">
+                <span style="width:6px; height:6px; background:var(--sky-light); border-radius:50%; flex-shrink:0;"></span>
+                <strong style="color:var(--white);">Beat by Amount:</strong>&nbsp;Undercut by a fixed dollar value
+              </li>
+              <li style="display:flex; align-items:center; gap:12px; font-size:0.9rem; color:rgba(255,255,255,0.72);">
+                <span style="width:6px; height:6px; background:var(--sky-light); border-radius:50%; flex-shrink:0;"></span>
+                <strong style="color:var(--white);">Price Match Only:</strong>&nbsp;Only update when you're higher, not lower
+              </li>
+              <li style="display:flex; align-items:center; gap:12px; font-size:0.9rem; color:rgba(255,255,255,0.72);">
+                <span style="width:6px; height:6px; background:var(--sky-light); border-radius:50%; flex-shrink:0;"></span>
+                <strong style="color:var(--white);">Intelligent Dynamic:</strong>&nbsp;AI decides the optimal price based on demand signals and competitor movement
+              </li>
+            </ul>
+          </div>
+
+          <div style="background:rgba(22,163,74,0.08); border:1px solid rgba(22,163,74,0.25); border-radius:var(--radius-md); padding:24px 28px;">
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+              <span style="font-size:1.2rem;">📈</span>
+              <strong style="color:#15803d; font-size:0.95rem;">Average Client Result</strong>
+            </div>
+            <p style="font-size:0.88rem; color:#166534; margin:0; line-height:1.7;">Clients using compareAI report an average <strong>23% increase in conversion rate</strong> and <strong>17% improvement in gross margin</strong> within the first 90 days of deployment.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== INTEGRATIONS ======================== -->
+  <section class="section section--gray" id="integrations">
+    <div class="container">
+      <div class="section__header">
+        <span class="eyebrow">Integrations</span>
+        <h2>Works With Your Existing Stack</h2>
+        <p>compareAI connects to the platforms you already use. One-click integrations with every major ecommerce platform and marketplace.</p>
+      </div>
+      <div class="integrations__grid">
+
+        <div class="integration-card">
+          <div class="integration-card__icon" style="background:#f0faf0;">
+            <i class="fa-brands fa-shopify" style="color:#96bf48; font-size:1.6rem;"></i>
+          </div>
+          <div class="integration-card__name">Shopify</div>
+          <div class="integration-card__type">Ecommerce Platform</div>
+        </div>
+
+        <div class="integration-card">
+          <div class="integration-card__icon" style="background:#f5f0fb;">
+            <i class="fa-brands fa-wordpress" style="color:#7f54b3; font-size:1.6rem;"></i>
+          </div>
+          <div class="integration-card__name">WooCommerce</div>
+          <div class="integration-card__type">Ecommerce Platform</div>
+        </div>
+
+        <div class="integration-card">
+          <div class="integration-card__icon" style="background:#fff5f0;">
+            <i class="fa-brands fa-magento" style="color:#f46f25; font-size:1.6rem;"></i>
+          </div>
+          <div class="integration-card__name">Magento</div>
+          <div class="integration-card__type">Ecommerce Platform</div>
+        </div>
+
+        <div class="integration-card">
+          <div class="integration-card__icon" style="background:#f0f3fa;">
+            <i class="fa-solid fa-cart-shopping" style="color:#34313f; font-size:1.45rem;"></i>
+          </div>
+          <div class="integration-card__name">BigCommerce</div>
+          <div class="integration-card__type">Ecommerce Platform</div>
+        </div>
+
+        <div class="integration-card">
+          <div class="integration-card__icon" style="background:#fff8ee;">
+            <i class="fa-brands fa-amazon" style="color:#ff9900; font-size:1.6rem;"></i>
+          </div>
+          <div class="integration-card__name">Amazon</div>
+          <div class="integration-card__type">Marketplace Monitor</div>
+        </div>
+
+        <div class="integration-card">
+          <div class="integration-card__icon" style="background:#eef5ff;">
+            <i class="fa-solid fa-store" style="color:#0071ce; font-size:1.45rem;"></i>
+          </div>
+          <div class="integration-card__name">Walmart</div>
+          <div class="integration-card__type">Marketplace Monitor</div>
+        </div>
+
+        <div class="integration-card">
+          <div class="integration-card__icon" style="background:#eef1ff;">
+            <i class="fa-solid fa-tag" style="color:#0046be; font-size:1.45rem;"></i>
+          </div>
+          <div class="integration-card__name">Best Buy</div>
+          <div class="integration-card__type">Marketplace Monitor</div>
+        </div>
+
+        <div class="integration-card">
+          <div class="integration-card__icon" style="background:#fff0f0;">
+            <i class="fa-solid fa-microchip" style="color:#e20017; font-size:1.45rem;"></i>
+          </div>
+          <div class="integration-card__name">Newegg</div>
+          <div class="integration-card__type">Marketplace Monitor</div>
+        </div>
+
+        <div class="integration-card">
+          <div class="integration-card__icon" style="background:#eaf5fb;">
+            <i class="fa-solid fa-code" style="color:#0077b6; font-size:1.45rem;"></i>
+          </div>
+          <div class="integration-card__name">REST API</div>
+          <div class="integration-card__type">Custom Integration</div>
+        </div>
+
+        <div class="integration-card">
+          <div class="integration-card__icon" style="background:#eaf5fb;">
+            <i class="fa-solid fa-bolt" style="color:#0077b6; font-size:1.45rem;"></i>
+          </div>
+          <div class="integration-card__name">Webhooks</div>
+          <div class="integration-card__type">Custom Integration</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== SECURITY ======================== -->
+  <section class="section">
+    <div class="container">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:center;">
+        <div>
+          <span class="eyebrow" style="display:inline-block; font-size:0.78rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--sky); margin-bottom:12px;">Security & Compliance</span>
+          <h2 style="margin-bottom:20px;">Your Data Stays in Canada</h2>
+          <p style="margin-bottom:16px;">All compareAI data is stored and processed exclusively within Canadian data centres. We are fully compliant with PIPEDA and relevant provincial privacy laws, making us the trusted choice for Canadian enterprises with strict data governance requirements.</p>
+          <p style="margin-bottom:32px;">Our infrastructure is SOC 2 Type II certified with 99.9% uptime SLA and multi-region redundancy across Ontario and British Columbia.</p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <span class="badge badge--navy" style="font-size:0.82rem; padding:8px 16px;">SOC 2 Type II</span>
+            <span class="badge badge--navy" style="font-size:0.82rem; padding:8px 16px;">PIPEDA Compliant</span>
+            <span class="badge badge--navy" style="font-size:0.82rem; padding:8px 16px;">Canadian Data Residency</span>
+            <span class="badge badge--navy" style="font-size:0.82rem; padding:8px 16px;">256-bit Encryption</span>
+          </div>
+        </div>
+        <div style="background:var(--off-white); border-radius:var(--radius-lg); padding:40px; border:1px solid var(--border);">
+          <h3 style="margin-bottom:24px; font-size:1.1rem;">Security Checklist</h3>
+          <ul style="display:flex; flex-direction:column; gap:16px;">
+            <li style="display:flex; gap:12px; font-size:0.9rem;">
+              <span style="color:#16a34a; font-weight:700; flex-shrink:0;">✓</span>
+              <span>End-to-end TLS 1.3 encryption in transit and AES-256 at rest</span>
+            </li>
+            <li style="display:flex; gap:12px; font-size:0.9rem;">
+              <span style="color:#16a34a; font-weight:700; flex-shrink:0;">✓</span>
+              <span>Role-based access control with SSO/SAML support</span>
+            </li>
+            <li style="display:flex; gap:12px; font-size:0.9rem;">
+              <span style="color:#16a34a; font-weight:700; flex-shrink:0;">✓</span>
+              <span>Complete audit logs for every price change with timestamp and trigger</span>
+            </li>
+            <li style="display:flex; gap:12px; font-size:0.9rem;">
+              <span style="color:#16a34a; font-weight:700; flex-shrink:0;">✓</span>
+              <span>Instant rollback — reverse any price change with one click</span>
+            </li>
+            <li style="display:flex; gap:12px; font-size:0.9rem;">
+              <span style="color:#16a34a; font-weight:700; flex-shrink:0;">✓</span>
+              <span>Annual penetration testing by independent third parties</span>
+            </li>
+            <li style="display:flex; gap:12px; font-size:0.9rem;">
+              <span style="color:#16a34a; font-weight:700; flex-shrink:0;">✓</span>
+              <span>99.9% uptime SLA backed by financial service credits</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== CTA ======================== -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="cta-banner">
+        <div class="cta-banner__content">
+          <h2>Ready to Win on Price Every Day?</h2>
+          <p>Choose a plan and start optimizing your pricing with compareAI. Cancel anytime.</p>
+        </div>
+        <div class="cta-banner__actions">
+          <a href="pricing.html" class="btn btn-primary">View Pricing Plans</a>
+          <a href="mailto:help.intelecho@gmail.com?subject=Getting%20Started%20with%20intelEcho" class="btn btn-outline">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">intel<span class="accent">Echo</span></div>
+          <p class="footer__desc">Empowering businesses with artificial intelligence that drives real, measurable results.</p>
+          <div class="footer__location">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Toronto, Ontario, Canada
+          </div>
+        </div>
+        <div>
+          <p class="footer__col-title">Company</p>
+          <ul class="footer__links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#team">Our Team</a></li>
+            <li><a href="about.html#values">Our Values</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Products</p>
+          <ul class="footer__links">
+            <li><a href="products.html">compareAI</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="products.html#integrations">Integrations</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Resources</p>
+          <ul class="footer__links">
+            <li><a href="pricing.html#faq">FAQ</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 intelEcho Inc. All rights reserved.</p>
+        <div class="footer__flag">🍁 Proudly Canadian</div>
+        <div class="footer__bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
